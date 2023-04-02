@@ -1,9 +1,11 @@
 <template>
-  <h1>App.vue</h1>
+  <RouterView />
 </template>
 
 <script>
-export default {};
+import { RouterView } from "vue-router";
+
+export default { components: { RouterView } };
 </script>
 
 <style></style>
