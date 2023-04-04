@@ -30,15 +30,16 @@ const addTodo = () => {
 const removeTodo = (todo) => {
   todos.value = todos.value.filter((t) => t !== todo);
 };
-
+console.log("vue 렌더링");
 watch(
   todos,
   (newVal) => {
     localStorage.setItem("todos", JSON.stringify(newVal));
   },
-  { deep: true }
+  { deep: true } //배열 감지
 );
 watch(name, (newVal) => {
+  console.log("watch 렌더링");
   //변수 입력시 행동
   localStorage.setItem("name", newVal);
 });
